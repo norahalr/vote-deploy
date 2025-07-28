@@ -14,7 +14,12 @@ spec:
         app: vote-ui
     spec:
       containers:
-      - image: docker.io/norahns/vote:latest
-        name: vote-ui
-        ports:
-        - containerPort: 80
+        - image: docker.io/norahns/vote:latest
+          name: vote-ui
+          ports:
+            - containerPort: 80
+          env:
+            - name: OPTION_A
+              value: "Cats"
+            - name: OPTION_B
+              value: "Dogs"
