@@ -5,6 +5,8 @@ node {
       
 
         checkout scm
+        sh 'ls -la'
+
     }
 
     stage('Update GIT') {
